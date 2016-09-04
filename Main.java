@@ -21,7 +21,7 @@ public class Main {
         Set desCel; //conjunto de desarrolladores Celulares
         
         FactorySET factory = new FactorySET();
-        int opcion = 0; //aqui se fuardara la opcion del usuario
+        int opcion = 0; //aqui se guarda la opcion del usuario
             
         while(opcion < 1 && opcion > 4){
             // menu del programa
@@ -32,7 +32,7 @@ public class Main {
             System.out.println ("4.SALIR");
             System.out.println ("Por favor introduzca una opcion preferida (1,2,3,4): ");
                
-            // solicitamos al usuario que ingres una opcion
+            // solicitamos al usuario que ingrese una opcion
             Scanner ingreso = new Scanner (System.in); 
             opcion = ingreso.nextInt();
                 
@@ -70,15 +70,14 @@ public class Main {
         
         
         while(opcion < 1 && opcion > 4){
-            // menu del programa
+            // siguiente menu de opciones
             System.out.println ("\nAgregamos usuarios:"); 
             System.out.println ("1.Desarolladores Java");
             System.out.println ("2.Desarrolladores Web");
             System.out.println ("3.Desarrolladores Celulares");
             System.out.println ("4.TERMINAR EL INGRESO");
             System.out.println ("Por favor introduzca una opcion preferida (1,2,3,4): ");
-               
-            // solicitamos al usuario que ingres una opcion
+            
             Scanner ingreso = new Scanner (System.in); 
             opcion = ingreso.nextInt();
                 
