@@ -48,21 +48,18 @@ public class Main {
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
-                System.out.println ("hashset"); 
                 break;
             case 2:
                 opcionSET = "treeset";
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
-                System.out.println ("treeset"); 
                 break;
             case 3:
                 opcionSET = "linkedhashset";
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
-                System.out.println ("linkedhashset"); 
                 break;
             case 4:
                 System.out.println ("\nAdios :)\n"); 
@@ -107,17 +104,9 @@ public class Main {
             
         }
         
-        System.out.println ("\nPreguntas: "); 
-        System.out.println ("1. Desarrolladores con experiencia en Java, web y celulares : "); 
-        
-        
         
         
         
                 
     }
 }
-    
-   
-    
-
