@@ -23,7 +23,7 @@ public class Main {
         FactorySET factory = new FactorySET();
         int opcion = 0; //aqui se fuardara la opcion del usuario
             
-        while(opcion < 1 && opcion > 4){
+        while(opcion < 1 || opcion > 4){
             // menu del programa
             System.out.println ("\nBienvenidos\n"); 
             System.out.println ("1.HashSet");
@@ -36,7 +36,7 @@ public class Main {
             Scanner ingreso = new Scanner (System.in); 
             opcion = ingreso.nextInt();
                 
-            if (opcion < 1 && opcion > 4){
+            if (opcion < 1 || opcion > 4){
                 System.out.println ("\nERROR: Opcion incorrecta\n"); }  
         }
             
