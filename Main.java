@@ -108,21 +108,47 @@ public class Main {
             
         }
         
-        
-        System.out.println ("\nPreguntas: "); 
-        System.out.println ("1. Desarrolladores con experiencia en Java, web y celulares : "); 
-        
         Iterator javaItr = desJava.iterator();
         Iterator webItr = desWeb.iterator();
         Iterator celItr = desCel.iterator();
         
+        String nomJava;
+        String nomWeb;
+        String nomCel;
+        
+        System.out.println ("\nDesarrolladores Java: ");
         while (javaItr.hasNext()){
-            String nomJava = javaItr.next().toString();
+            nomJava = javaItr.next().toString();
+            System.out.println(nomJava);
+        }
+        
+        System.out.println ("\nDesarrolladores Web: ");
+        while (webItr.hasNext()){
+            nomWeb = webItr.next().toString();
+            System.out.println(nomWeb);
+        }
+        
+        System.out.println ("\nDesarrolladores Celulares: ");
+        while (celItr.hasNext()){
+            nomCel = celItr.next().toString();
+            System.out.println(nomCel);    
+        }
+        
+        
+        System.out.println ("\nPreguntas: "); 
+        System.out.println ("1. Desarrolladores con experiencia en Java, web y celulares : "); 
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        while (javaItr.hasNext()){
+            nomJava = javaItr.next().toString();
             while (webItr.hasNext()){
-                String nomWeb = webItr.next().toString();
+                nomWeb = webItr.next().toString();
                 if (nomJava.equals(nomWeb)){
                     while (celItr.hasNext()){
-                        String nomCel = celItr.next().toString();
+                        nomCel = celItr.next().toString();
                         if (nomJava.equals(nomCel)){
                             System.out.println (nomCel); 
                         }    
@@ -139,24 +165,121 @@ public class Main {
         
         
         while (javaItr.hasNext()){
-            String nomJava = javaItr.next().toString();
+            nomJava = javaItr.next().toString();
             while (webItr.hasNext()){
-                String nomWeb = webItr.next().toString();
+                nomWeb = webItr.next().toString();
                 if (nomJava.equals(nomWeb) == false){
-                    System.out.println (nomWeb);
+                    System.out.println(nomJava);
                 }
             }
         }
         
         System.out.println ("3. Desarrolladores con experiencia en Web y Celulares: ");
         
-        while (javaItr.hasNext()){
-            String nomJava = javaItr.next().toString();
-            while (webItr.hasNext()){
-                String nomWeb = webItr.next().toString();
-                if (nomJava.equals(nomWeb) == false){
-                    System.out.println (nomWeb);
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        while (webItr.hasNext()){
+            nomWeb = webItr.next().toString();
+            while (celItr.hasNext()){
+                nomCel = celItr.next().toString();
+                if (nomWeb.equals(nomCel)){
+                    System.out.println(nomWeb);
                 }
+            }
+        }
+        
+        System.out.println ("4. Desarrolladores con experiencia en Web o Celulares");
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        while (webItr.hasNext()){
+            nomWeb = webItr.next().toString();
+            System.out.println(nomWeb);
+        }
+        while (celItr.hasNext()){
+            nomCel = celItr.next().toString();
+            System.out.println(nomCel);    
+        }
+        
+        
+        System.out.println ("5. Indicar SI o NO el conjunto de desarrolladores Java es un subconjunto de Desarrolladores Web: ");
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        while (javaItr.hasNext()){
+            nomJava = javaItr.next().toString();
+            while (webItr.hasNext()){
+                nomWeb = webItr.next().toString();
+                if (nomJava.equals(nomWeb)){
+                    System.out.println("Si");
+                }else{ 
+                    System.out.println("No");}
+            }
+        }
+        
+        System.out.println ("6. El conjunto (Java, Web o Celulares) que tenga la cantidad más grande de desarrolladores: ");
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        
+        if (desJava.size() >= desWeb.size() && desJava.size() >= desCel.size()){
+            System.out.println("Hay mas desarrolladores Java");
+            while (javaItr.hasNext()){
+                nomJava = javaItr.next().toString();
+                System.out.println(nomJava);
+            }
+        }
+        
+        if (desWeb.size() >= desJava.size() && desWeb.size() >= desCel.size()){
+            System.out.println("Hay mas desarrolladores Web");
+            while (webItr.hasNext()){
+                nomWeb = webItr.next().toString();
+                System.out.println(nomWeb);
+            }
+        }
+        
+        if (desCel.size() >= desWeb.size() && desCel.size() >= desJava.size()){
+            System.out.println("Hay mas desarrolladores Celulares");
+            while (celItr.hasNext()){
+                nomCel = celItr.next().toString();
+                System.out.println(nomCel);    
+            }
+        }
+        
+        
+        System.out.println ("7. desplegar la lista de los nombres de sus integrantes en orden ascendente: ");
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
+        
+        
+        if (desJava.size() >= desWeb.size() && desJava.size() >= desCel.size()){
+            while (javaItr.hasNext()){
+                nomJava = javaItr.next().toString();
+                System.out.println(nomJava);
+            }
+        }
+        
+        if (desWeb.size() >= desJava.size() && desWeb.size() >= desCel.size()){
+            while (webItr.hasNext()){
+                nomWeb = webItr.next().toString();
+                System.out.println(nomWeb);
+            }
+        }
+        
+        if (desCel.size() >= desWeb.size() && desCel.size() >= desJava.size()){
+            while (celItr.hasNext()){
+                nomCel = celItr.next().toString();
+                System.out.println(nomCel);    
             }
         }
         
