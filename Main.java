@@ -113,8 +113,8 @@ public class Main {
         System.out.println ("1. Desarrolladores con experiencia en Java, web y celulares : "); 
         
         Iterator javaItr = desJava.iterator();
-        Iterator webItr = desJava.iterator();
-        Iterator celItr = desJava.iterator();
+        Iterator webItr = desWeb.iterator();
+        Iterator celItr = desCel.iterator();
         
         while (javaItr.hasNext()){
             String nomJava = javaItr.next().toString();
@@ -124,16 +124,41 @@ public class Main {
                     while (celItr.hasNext()){
                         String nomCel = celItr.next().toString();
                         if (nomJava.equals(nomCel)){
-                            System.out.println (nomWeb); 
+                            System.out.println (nomCel); 
                         }    
                     }
                 }
             }
         }
        
+        System.out.println ("2. Desarrolladores con experiencia en Java pero que no tengan experiencia en web : "); 
+        
+        javaItr = desJava.iterator();
+        webItr = desWeb.iterator();
+        celItr = desCel.iterator();
         
         
+        while (javaItr.hasNext()){
+            String nomJava = javaItr.next().toString();
+            while (webItr.hasNext()){
+                String nomWeb = webItr.next().toString();
+                if (nomJava.equals(nomWeb) == false){
+                    System.out.println (nomWeb);
+                }
+            }
+        }
         
+        System.out.println ("3. Desarrolladores con experiencia en Web y Celulares: ");
+        
+        while (javaItr.hasNext()){
+            String nomJava = javaItr.next().toString();
+            while (webItr.hasNext()){
+                String nomWeb = webItr.next().toString();
+                if (nomJava.equals(nomWeb) == false){
+                    System.out.println (nomWeb);
+                }
+            }
+        }
         
                 
     }
