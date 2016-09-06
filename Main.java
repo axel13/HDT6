@@ -75,7 +75,7 @@ public class Main {
             nUsuarios = ingreso.nextInt();        
         }
         
-        int contador =1;
+        int contador = 0;
         String nombre;
         String java;
         String web;
@@ -100,6 +100,7 @@ public class Main {
                 desCel.add(nombre);}
             
             nUsuarios -= 1;
+            contador +=1;
             
         }
         
