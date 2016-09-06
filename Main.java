@@ -2,6 +2,7 @@
 import java.util.Scanner;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet; 
@@ -48,18 +49,21 @@ public class Main {
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
+                System.out.println ("hashset"); 
                 break;
             case 2:
                 opcionSET = "treeset";
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
+                System.out.println ("treeset"); 
                 break;
             case 3:
                 opcionSET = "linkedhashset";
                 desJava = factory.ObtenerSET(opcionSET);
                 desWeb = factory.ObtenerSET(opcionSET);
                 desCel = factory.ObtenerSET(opcionSET);
+                System.out.println ("linkedhashset"); 
                 break;
             case 4:
                 System.out.println ("\nAdios :)\n"); 
@@ -105,8 +109,36 @@ public class Main {
         }
         
         
+        System.out.println ("\nPreguntas: "); 
+        System.out.println ("1. Desarrolladores con experiencia en Java, web y celulares : "); 
+        
+        Iterator javaItr = desJava.iterator();
+        Iterator webItr = desJava.iterator();
+        Iterator celItr = desJava.iterator();
+        
+        while (javaItr.hasNext()){
+            String nomJava = javaItr.next().toString();
+            while (webItr.hasNext()){
+                String nomWeb = webItr.next().toString();
+                if (nomJava.equals(nomWeb)){
+                    while (celItr.hasNext()){
+                        String nomCel = celItr.next().toString();
+                        if (nomJava.equals(nomCel)){
+                            System.out.println (nomWeb); 
+                        }    
+                    }
+                }
+            }
+        }
+       
+        
+        
         
         
                 
     }
 }
+    
+   
+    
+
